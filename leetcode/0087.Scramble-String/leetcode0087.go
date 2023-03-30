@@ -17,8 +17,8 @@ func checkScramble(s1 string, s2 string, mp map[string]bool) bool {
 		return false
 	}
 
-	sort_s1 := []rune(s1)
-	sort_s2 := []rune(s2)
+	sort_s1 := []byte(s1)
+	sort_s2 := []byte(s2)
 	sort.Slice(sort_s1, func(i int, j int) bool { return sort_s1[i] < sort_s1[j] })
 	sort.Slice(sort_s2, func(i int, j int) bool { return sort_s2[i] < sort_s2[j] })
 
